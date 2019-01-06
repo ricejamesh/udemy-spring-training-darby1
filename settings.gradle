@@ -1,0 +1,4 @@
+rootProject.name = 'spring-training'
+include 'spring-annotations'
+include 'spring-mvc'
+
