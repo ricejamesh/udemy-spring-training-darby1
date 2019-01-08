@@ -15,5 +15,8 @@ Country: ${student.country}
 <br><br>
     Favorite Language: ${student.favoriteLanguage}
 
+<br><br>
+    Favorite Name: ${student.favoriteName}
+
 </body>
 </html>

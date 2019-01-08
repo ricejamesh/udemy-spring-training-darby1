@@ -30,7 +30,7 @@
 
          </form:select>
 
-         <br><br>
+        <br><br>
 
         Favorite Language:
 
@@ -42,7 +42,15 @@
 
          <br><br>
 
-         <input type="submit" value="Submit" />
+        Favorite Name:
+
+        <form:radiobuttons path="favoriteName" items="${student.favoriteNameOptions}" />
+
+        <br><br>
+
+
+
+        <input type="submit" value="Submit" />
 
      </form:form>
 
