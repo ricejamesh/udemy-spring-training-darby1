@@ -5,7 +5,9 @@ plugins {
 group 'ttg-solutions'
 version '1.0-SNAPSHOT'
 
-
+// Adjust default web content to typical Eclipse location.
+// Default gradle war plugin uses: ./src/main/webapp
+// Adjust to ./web
 project.webAppDirName = 'web'
 
 sourceCompatibility = 1.8
