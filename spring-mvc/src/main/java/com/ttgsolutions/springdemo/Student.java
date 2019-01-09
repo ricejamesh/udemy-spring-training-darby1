@@ -15,6 +15,8 @@ public class Student {
 
     private String favoriteName;
 
+    private String[] operatingSystems;
+
 
     public String getFavoriteLanguage() {
         return favoriteLanguage;
@@ -80,5 +82,13 @@ public class Student {
 
     public void setFavoriteName(String favoriteName) {
         this.favoriteName = favoriteName;
+    }
+
+    public String[] getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
     }
 }

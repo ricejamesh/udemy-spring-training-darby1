@@ -39,8 +39,7 @@
         PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
         Javascript <form:radiobutton path="favoriteLanguage" value="Javascript" />
 
-
-         <br><br>
+        <br><br>
 
         Favorite Name:
 
@@ -48,7 +47,13 @@
 
         <br><br>
 
+        Operating Systems:
 
+        Linux <form:checkbox path="operatingSystems" value="Linux" />
+        Windows <form:checkbox path="operatingSystems" value="Windows" />
+        Centos <form:checkbox path="operatingSystems" value="centos" />
+
+        <br><br>
 
         <input type="submit" value="Submit" />
 
