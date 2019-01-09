@@ -40,6 +40,12 @@ public class CustomerController {
 
         System.out.println("lastName: |" + theCustomer.getLastName() + "| ");
 
+        // This shows the specific issues with validation errors
+        // which allows you to properly map your errors in messages.properties.
+        System.out.println("Binding result: " + theBindingResult);
+
+        System.out.println("\n\n\n\n");
+
         if (theBindingResult.hasErrors()) {
             return "customer-form";
         }
