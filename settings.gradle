@@ -1,4 +1,5 @@
 rootProject.name = 'spring-training'
 include 'spring-annotations'
 include 'spring-mvc'
+include 'hibernate-tutorial'
 
