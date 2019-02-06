@@ -5,7 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class ReadStudentDemo {
+public class UpdateStudentDemo {
 
     public static void main(String[] args) {
 
@@ -21,38 +21,38 @@ public class ReadStudentDemo {
         // use the session object to save Java object
         try {
 
-            // create a student object
-            System.out.println("Creating a new student object...");
-            //Student tempStudent = new Student("Paul", "Wall", "Paul@email.com");
-            Student tempStudent = new Student("Daffy", "Duck", "daffy@email.com");
+            int studentId = 1;
 
             // start the transaction
             session.beginTransaction();
 
-            // save the student object
-            System.out.println("Saving the student...");
-            session.save(tempStudent);
+            // retrieve student based on id: primary key
+            System.out.println("\nGetting student with id: " + studentId);
+
+            Student myStudent = session.get(Student.class, studentId);
+
+            System.out.println("Get Complete: " + myStudent.toString());
+            System.out.println("Updating...");
+
+            myStudent.setFirstName(myStudent.getFirstName() + "+");
 
             // commit transaction
             session.getTransaction().commit();
 
-            // find the student's id: primary key
-            System.out.println("Saved student. Generated id: " + tempStudent.getId() + "  " + tempStudent);
+            // ------------------
 
-            // get a new session
+            // start the transaction
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            // retrieve by id
+            // Update email for all students
 
-            // commit the transaction
-            System.out.println("\nGetting student with id: " + tempStudent.getId());
+            session.createQuery("update Student set email='foo@gmail.com'").executeUpdate();
 
-            Student myStudent = session.get(Student.class, tempStudent.getId());
-
-            System.out.println("\nGet Complete: " + myStudent);
-
+            // commit transaction
             session.getTransaction().commit();
+
+
 
             System.out.println("Done!");
         } finally {

@@ -23,3 +23,9 @@ little tool for connecting to your postgres database for basic maintenance.
 ```bash
 docker-compose up
 ```
+
+Quick Docker Test for postgres
+
+```bash
+docker run --name some-postgres -e POSTGRES_PASSWORD_FILE=/run/secrets/psql_passwd POSTGRES_USER_FILE=/run/secrets/psql_user -d postgres
+```
