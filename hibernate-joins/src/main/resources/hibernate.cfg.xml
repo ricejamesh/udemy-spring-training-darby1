@@ -8,9 +8,10 @@
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://localhost/hb_student_tracker?ssl=false&amp;serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hb_student_tracker</property>
         <property name="connection.username">hbstudent</property>
         <property name="connection.password">hbstudent</property>
+
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>
@@ -25,7 +26,11 @@
 
 		<!-- Set the current session context -->
 		<property name="current_session_context_class">thread</property>
- 
+        <mapping class="com.ttgsolutions.springdemo.entity.Course"/>
+        <mapping class="com.ttgsolutions.springdemo.entity.Instructor"/>
+        <mapping class="com.ttgsolutions.springdemo.entity.JB_InstructorDetail_Entity"/>
+        <mapping class="com.ttgsolutions.springdemo.entity.JB_Student_Entity"/>
+
     </session-factory>
 
 </hibernate-configuration>
