@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'ttg-solutions'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'org.hibernate:hibernate-core:5.4.0.Final'
+
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+
+    /*
+    Error: Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+
+    This happens because of Java 9 and higher.
+
+    Java 9 and higher has removed java.xml.bind from its default classpath. That's why we get the class not found exception.  We have to explicitly add JAR files to the build path.
+    */
+
+    /*
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.1'
+    compile group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.1'
+    compile group: 'com.sun.activation', name: 'javax.activation', version: '1.2.0'
+    */
+
+}
