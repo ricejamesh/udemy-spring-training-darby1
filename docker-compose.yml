@@ -22,7 +22,7 @@ services:
     volumes:
       - pgadmin-dev:/var/lib/pgadmin
       - ./docker/servers.json:/servers.json
-      - ./hibernate-tutorial/sql:/var/lib/pgadmin/storage/user/
+      - ./sql:/var/lib/pgadmin/storage/user/
     ports:
       - '8080:80'
     environment:
