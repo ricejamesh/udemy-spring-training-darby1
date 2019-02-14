@@ -28,6 +28,7 @@
 		<property name="current_session_context_class">thread</property>
         <mapping class="com.ttgsolutions.springdemo.entity.Course"/>
         <mapping class="com.ttgsolutions.springdemo.entity.Instructor"/>
+        <mapping class="com.ttgsolutions.springdemo.entity.Student"/>
         <mapping class="com.ttgsolutions.springdemo.entity.JB_InstructorDetail_Entity"/>
         <mapping class="com.ttgsolutions.springdemo.entity.JB_Student_Entity"/>
 

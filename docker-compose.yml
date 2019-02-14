@@ -1,6 +1,5 @@
 version: '3.1'
 
-
 services:
 
   postgres-dev:
@@ -9,13 +8,13 @@ services:
     volumes: 
       - postgres-dev:/var/lib/postgresql
     ports:
-      - '5432:5432'
+      - 5432:5432
     secrets:
       - psql_user
       - psql_password
     environment:
-      POSTGRES_PASSWORD_FILE: /run/secrets/psql_password
-      POSTGRES_USER_FILE: /run/secrets/psql_user
+      POSTGRES_PASSWORD: magic
+      POSTGRES_USER: jim
 
   pg-admin:
     image: dpage/pgadmin4
